@@ -1,0 +1,22 @@
+table {
+    border: 3px solid rgb(166, 75, 223);
+    border-radius: 3px;
+    text-align: center;
+}
+
+td:hover {
+    background-color: yellow;
+    color: black;
+}
+
+tr, th {
+    background-color: black;
+    color: cornsilk;
+}
+tr, td {
+    background-color: darkgreen;
+    color: white;
+}
+td, th {
+    padding: 10px;
+}

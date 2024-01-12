@@ -1,0 +1,15 @@
+p {
+    color: green;
+    text-align: right;
+}
+
+.font1 {
+    background-color: black;
+    color: yellow;
+    font-size: large;
+}
+.font2 {
+    background-color: darkblue;
+    color: white;
+    font-size: medium;
+}
