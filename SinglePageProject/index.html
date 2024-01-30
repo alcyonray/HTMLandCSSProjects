@@ -4,40 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel Destinations</title>
+    <link rel="stylesheet" href="./CSS/singlepage.css">
 </head>
 <body>
     
     <!-- NAVIGATION -->
-    <div id="nav">
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#gallery">Gallery</a>
-            <a href="#contact">Contact</a>
-            <a href="#cinema">Cinema</a>
-        </nav>
+    <div id="wrap">
+        <div class="navContainer">
+            <ul class="navigation">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#cinema">Cinema</a></li>
+            </ul>
+        </div>
     </div>
     <!-- END NAVIGATION -->
 
     <!-- HOME -->
     <div id="home">
-        <div>
-            <span>Travel Destinations</span>
+        <div class="container">
+            <div class="text-center">
+                <span class="head-main">Traveling Destinations</span>
+            </div>
         </div>
     </div>
     <!-- END HOME -->
 
     <!-- GALLERY -->
-    <section>
-        <div id="gallery">
+    <section id="gallery">
+        <div class="container">
             <h1>Travel Gallery</h1>
             <!-- Image containers -->
-            <div>
+            <div class="flex-container">
                 
                 <!-- Image One -->
                 <div class="imageContainer">
                     <div class="image">
                         <img src="./resources/images/barcelona.jpg" alt="The vibrant Park Guell entrance in Barcelona, Spain.">
-                        <p>The beautiful and vibrant entrance to Park Guell, in Barcelona Spain.</p>
+                        <div class="imageOverlay">
+                            <h3 class="imageHeading">Barcelona, Spain</h3>
+                            <p>The beautiful and vibrant entrance to Park Guell.</p>
+                        </div>
                     </div>
                 </div>
                 <!-- End Image One -->
@@ -46,7 +54,10 @@
                 <div class="imageContainer">
                     <div class="image">
                         <img src="./resources/images/prague.jpg" alt="A glorious gothic castle in Prague, Czech Republic.">
-                        <p>A dark and powerful gothic castle, seen from the city center of Prague, Czech Republic.</p>
+                        <div class="imageOverlay">
+                            <h3 class="imageHeading">Prague, Czech Republic</h3>
+                            <p>A dark and powerful gothic castle, seen from the city center.</p>
+                        </div>
                     </div>
                 </div>
                 <!-- End Image Two -->
@@ -55,7 +66,10 @@
                 <div class="imageContainer">
                     <div class="image">
                         <img src="./resources/images/berlin.jpg" alt="The city skyline of Berlin, Germany.">
-                        <p>The city skyline of Berlin, Germany; with view of the Fernsehturm.</p>
+                        <div class="imageOverlay">
+                            <h3 class="imageHeading">Berlin, Germany</h3>
+                            <p>The city skyline; with view of the Fernsehturm tower.</p>
+                        </div>
                     </div>
                 </div>
                 <!-- End Image Three -->
@@ -64,7 +78,10 @@
                 <div class="imageContainer">
                     <div class="image">
                         <img src="./resources/images/florence.jpg" alt="The city skyline of Florence, Italy.">
-                        <p>The city skyline of Florence, Italy.  With its iconic red tile rooves, and view of the Santa Maria del Fiore cathedral.</p>
+                        <div class="imageOverlay">
+                            <h3 class="imageHeading">Florence, Italy</h3>
+                            <p>The city skyline, with its iconic red tile rooves, and view of the Santa Maria del Fiore cathedral.</p>
+                        </div>
                     </div>
                 </div>
                 <!-- End Image Four -->
@@ -73,7 +90,10 @@
                 <div class="imageContainer">
                     <div class="image">
                         <img src="./resources/images/brussels.jpg" alt="The Grand Palace, in Brussels, Belgium.">
-                        <p>The city center of Brussels, Belgium; showcasing the Grand Palce, and most beautiful living flower mosaic.</p>
+                        <div class="imageOverlay">
+                            <h3 class="imageHeading">Brussels, Belgium</h3>
+                            <p>The city center, showcasing the Grand Palce, and most beautiful living flower mosaic.</p>
+                        </div>
                     </div>
                 </div>
                 <!-- End Image Five -->
@@ -82,7 +102,10 @@
                 <div class="imageContainer">
                     <div class="image">
                         <img src="./resources/images/santorini.jpg" alt="Twilight in Santorini, Greece.">
-                        <p>Seen here at twilight, one of the most beautiful coatal cities in Europe: Santorini, Greece.</p>
+                        <div class="imageOverlay">
+                            <h3 class="imageHeading">Santorini, Greece</h3>
+                            <p>One of the most beautiful coastal cities in Europe, seen here at twilight.</p>
+                        </div>
                     </div>
                 </div>
                 <!-- End Image Six -->
@@ -126,7 +149,7 @@
 
     <!-- CINEMA -->
     <div id="cinema">
-        <h3>Watch this video, to get inspiried about vacationing in Europe.</h3>
+        <h3>Watch this video, and get inspiried about vacationing in Europe.</h3>
         <iframe height="540px" width="720px" src="https://www.youtube.com/embed/0GZSfBuhf6Y" frameborder="0"></iframe>
     </div>
     <!-- END CINEMA --

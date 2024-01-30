@@ -1,21 +1,21 @@
-/*--------------------
-GENERIC STYLES
+/*---------------------
+GENERAL STYLING RULES 
 ---------------------*/
 html {
-    font-family: sans-serif;
-    font-size: 62.5%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 54%;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
 }
 
 body {
-    font-size: 14px;
+    font-size: 18px;
     margin: 0;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.42857143;
-    color: #333;
-    background-color: #fff;
+    color: #8dc247;
+    background-color: #c09ecc;
 }
 
 footer, nav {
@@ -32,7 +32,7 @@ h1 {
     font-size: 30px;
     text-transform: uppercase;
     text-align: center;
-    color: #e91c1c;
+    color: #8dc247;
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
 }
 
@@ -129,12 +129,12 @@ section {
     padding-top: 15px;
 }
 
-.menu-container {
+.navContainer {
     max-height: 340px;
     margin: 0% auto;
     content: " ";
-    /* top: 0;
-    left: 0; */
+    top: 0;
+    left: 0; 
     /* posiiton: absolute; */ /* to the top edge of the screen */
     width: 100%;
     position: fixed;
@@ -147,7 +147,7 @@ section {
 HOME SECTION STYLES 
 ------------------------*/
 #home {
-    background: url(../images/trackDay.jpg) no-repeat 50% 50%;
+    background: url(../resources/images/treasureAwaits.jpg) no-repeat 50% 50%;
     background-attachment: fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -376,4 +376,114 @@ FOOTER STYLES
     .container {
         width: 1170px;
     }
+}
+
+
+/*--------------------------
+Navigation Animations 
+--------------------------*/
+.navigation {
+    color: #f00;
+    font: bold 12px/18px sans-serif;
+    text-align: center;
+    display: inline;
+    margin: 0% auto;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+.navigation li {
+    color: #000;
+    background-color: rgba(255, 255, 255, 1);
+    display: inline-block;
+    margin: 0% auto;
+    position: relative;
+    padding: 15px 4%;
+    border: 1px solid #9d9fa2;
+    box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 6px;
+    /*background-color: #052136;*/
+    cursor: pointer;
+    transition-property: background;
+    transition-duration: .4s;
+    transition-delay: 0s;
+    transition-timing-function: ease-in-out;
+}
+
+.navigation li:hover {
+    color: #f00;
+    background-color: rgba(100, 65, 0, 0.3);
+}
+
+
+/*------------------------
+GALLERY SECTION ANIMATION
+------------------------*/
+.image {
+    position: relative;
+    line-height: 0;
+    margin-bottom: 2em;
+    overflow: hidden;
+    border-radius: 8px;
+    padding: 1px;
+    border: 1px solid #021a40;
+    background-color: #ff0;
+    box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.7);
+}
+
+.imageContainer {
+    text-align: center;
+    margin: 15px auto;
+    width: 300px;
+    height: 169px;
+}
+
+.imageContainer img {
+    max-width: 100%;
+    width: 300px;
+    height: 169px;
+}
+
+.imageOverlay {
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content: center; /* For centering text inside .photo-overlay */
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.imageHeading {
+    color: #c9bdaa;
+    margin-top: 5%;
+}
+
+
+/*--------------------------
+PHOTO OVERLAY TRANSITIONS
+------------------------*/
+.imageOverlay {
+    opacity: 0;
+    transition: opacity .5s;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.imageOverlay:hover {
+    opacity: 1;
+}
+
+.image img {
+    transition: transform .5s;
+    transform-origin: 50% 50%;
+}
+
+.image:hover img {
+    transform: scale(1.1);
 }
