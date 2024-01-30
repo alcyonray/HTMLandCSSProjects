@@ -1,21 +1,21 @@
-/*---------------------
-GENERAL STYLING RULES 
+/*--------------------
+GENERIC STYLES
 ---------------------*/
 html {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 54%;
+    font-family: sans-serif;
+    font-size: 62.5%;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
 }
 
 body {
-    font-size: 18px;
+    font-size: 14px;
     margin: 0;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.42857143;
-    color: #8dc247;
-    background-color: #c09ecc;
+    color: #333;
+    background-color: #fff;
 }
 
 footer, nav {
@@ -27,21 +27,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    line-height: 50px;
+    line-height: 72px;
     font-weight: 900;
-    font-size: 30px;
+    font-size: 54px;
     text-transform: uppercase;
     text-align: center;
-    color: #8dc247;
+    color: #81e25e;
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
 }
 
 h1::after { /* This is after the underline */
     display: block;
     content: " ";
-    height: 2px;
-    width: 150px;
-    background: #e91c1c;
+    height: 3px;
+    width: 342px;
+    background: #bc6a19;
     margin: 5px auto 40px;
     box-shadow: 5px 2px 3px rgba(0, 0, 0, 0.5);
 }
@@ -94,6 +94,7 @@ section {
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+    align-items: center;
 }
 
 .container-fluid {
@@ -133,8 +134,8 @@ section {
     max-height: 340px;
     margin: 0% auto;
     content: " ";
-    top: 0;
-    left: 0; 
+    /* top: 0;
+    left: 0; */
     /* posiiton: absolute; */ /* to the top edge of the screen */
     width: 100%;
     position: fixed;
@@ -147,7 +148,7 @@ section {
 HOME SECTION STYLES 
 ------------------------*/
 #home {
-    background: url(../resources/images/treasureAwaits.jpg) no-repeat 50% 50%;
+    background: url("../resources/images/treasureAwaits.jpg") no-repeat 50% 50%;
     background-attachment: fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -202,24 +203,24 @@ HOME SECTION STYLES
     padding: 10px;
     border-radius: 8px;
     margin: 0px auto;
-    background-color: rgba(100, 65, 0, .3);
+    background-color: rgba(207, 157, 65, 0.3);
     box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.5);
 }
 
 #contact {
-    background-color: #f5f3f3;
+    background-color: #edc2c2;
 }
 
-.reservation {
+.inquiry {
     width: 60%;
     padding: 10px;
     border-radius: 8px;
     margin: 0px auto;
-    background-color: rgba(100, 65, 0, .3);
+    background-color: rgba(141, 200, 69, 0.3);
     box-shadow: -1px -1px 1px 0 rgba(0, 0, 0, 1), 1px 2px 10px 0 rgba(0, 0, 0, 0.5);
 }
 
-.reservation h2 {
+.inquiry h2 {
     width: 70%;
     text-align: center;
     margin: 0  auto;
@@ -230,7 +231,7 @@ HOME SECTION STYLES
     word-spacing: 0pt;
 }
 
-.reservation h2 span {
+.inquiry h2 span {
     width: 70%;
     text-align: center;
     margin: 0 auto;
@@ -242,13 +243,13 @@ HOME SECTION STYLES
     word-spacing: .3pt;
 }
 
-.reservation p {
+.inquiry p {
     color: #13161b;
     width: 50%;
     margin: 0 auto;
 }
 
-.reservation form {
+.inquiry form {
     font-size: 15px;
     outline: none;
     font-weight: 600;
@@ -263,7 +264,7 @@ HOME SECTION STYLES
     font-family: 'Raleway', sans-serif;
 }
 
-.reservation input[type="text"] {
+.inquiry input[type="text"] {
     font-size: 15px;
     outline: none;
     font-weight: 600;
@@ -281,7 +282,7 @@ HOME SECTION STYLES
     font-family: 'Raleway', sans-serif;
 }
 
-.reservation input[type="text"]:hover {
+.inquiry input[type="text"]:hover {
     box-shadow: 0 0 18px rgba(100, 65, 0, .8);
 }
 
@@ -333,6 +334,16 @@ HOME SECTION STYLES
     box-shadow: inset 1px 2px 15px 0 rgba(0, 0, 0, 0.5);
 }
 
+/*-----------------------
+CINEMA STYLES
+------------------------*/
+#cinema .container iframe {
+    height: 540px;
+    width: 720px;
+    margin-left: 15%;
+    margin-bottom: 90px;
+}
+
 
 /*-------------------
 FOOTER STYLES 
@@ -380,7 +391,7 @@ FOOTER STYLES
 
 
 /*--------------------------
-Navigation Animations 
+MENU SECTION ANIMATION 
 --------------------------*/
 .navigation {
     color: #f00;
@@ -394,8 +405,8 @@ Navigation Animations
 }
 
 .navigation li {
-    color: #000;
-    background-color: rgba(255, 255, 255, 1);
+    color: #b75959;
+    background-color: rgb(182, 179, 179);
     display: inline-block;
     margin: 0% auto;
     position: relative;
@@ -420,6 +431,10 @@ Navigation Animations
 /*------------------------
 GALLERY SECTION ANIMATION
 ------------------------*/
+#gallery {
+    background-color: #fff;
+}
+
 .image {
     position: relative;
     line-height: 0;
@@ -428,7 +443,7 @@ GALLERY SECTION ANIMATION
     border-radius: 8px;
     padding: 1px;
     border: 1px solid #021a40;
-    background-color: #ff0;
+    background-color: rgb(76, 225, 116);
     box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.7);
 }
 
@@ -446,7 +461,7 @@ GALLERY SECTION ANIMATION
 }
 
 .imageOverlay {
-    color: #fff;
+    color: #000000;
     position: absolute;
     top: 0;
     right: 0;
@@ -456,11 +471,11 @@ GALLERY SECTION ANIMATION
     padding-right: 20px;
     justify-content: center; /* For centering text inside .photo-overlay */
     align-items: center;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(233, 211, 83, 0.777);
 }
 
 .imageHeading {
-    color: #c9bdaa;
+    color: rgb(36, 30, 21);
     margin-top: 5%;
 }
 
