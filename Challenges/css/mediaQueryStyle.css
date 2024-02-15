@@ -1,0 +1,36 @@
+.container {
+    width: 90%;
+    text-align: center;
+    background-color: blueviolet;
+    margin: auto;
+    padding: 36px;
+}
+
+.head {
+    font-size: 43px;
+    color: gold;
+}
+
+.banner img {
+    width: 100%;
+}
+
+.writeup {
+    border: 3px solid black;
+    border-radius: 12px;
+    background-color: white;
+    padding: 12px;
+}
+
+.writeup h3 {
+    text-decoration: underline;
+    font-size: 24px;
+}
+
+
+
+@media screen and (max-width: 600px) {
+    p {
+        color: blue;
+    }
+}
