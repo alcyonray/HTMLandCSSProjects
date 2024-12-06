@@ -1,7 +1,7 @@
 function MyFirstFunction() {
-    var string = "Kiss me, I'm Irish!";
-    var result = string.fontcolor("green");
-    document.getElementById("Irish").innerHTML = result;
+    var kissMe = "Kiss me, I'm Irish!";
+    document.getElementById("Irish").innerHTML = kissMe;
+    document.getElementById("Irish").style.color = 'green';
 }
 function MySecondFunction() {
     alert("Hello, cruel world...");
