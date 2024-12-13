@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Contact form, for The Pet Shop">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Contact Us!</title>
 </head>
 <body>
     <!-- Navbar -->
-    <nav>
-        <ul>
+    <nav class="nav-bar">
+        <ul id="nav-border">
             <li><a href="index.html">HOME</a></li>
             <li><a href="contact.html">CONTACT</a></li>
         </ul>
@@ -17,20 +18,20 @@
     <!-- HEADER -->
     <header>
         <div>
-        <h1>Contact Us!</h1>
+        <h1 class="animate-text">Contact Us!</h1>
         </div>
     </header>
     <!-- FORM -->
      <section>
         <div>
-            <h3>Please provide your contact information
+            <h3 id="contact-h3">Please provide your contact information
                 and a brief message of your inquiry.
             </h3>
             <div>
                 <form>
                     <input type="text" placeholder="First Name">
                     <input type="text" placeholder="Last Name"><br>
-                    <input type="email" placeholder="Email"><br>
+                    <input type="email" placeholder="Email">
                     <input type="tel" placeholder="Phone Number"><br>
                     <input type="checkbox" id="Newsletter">
                     <label for="Newsletter">Would you like to receive our monthly nesletter?</label><br>
