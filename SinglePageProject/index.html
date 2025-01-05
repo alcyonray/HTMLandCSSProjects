@@ -12,10 +12,10 @@
     <div class="wrap">
         <div class="navContainer">
             <ul class="navigation">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#cinema">Cinema</a></li>
+                <li><a href="#home" onclick="modalCheck()">Home</a></li>
+                <li><a href="#gallery" onclick="modalCheck()">Gallery</a></li>
+                <li><a href="#contact" onclick="modalCheck()">Contact</a></li>
+                <li><a href="#cinema" onclick="modalCheck()">Cinema</a></li>
             </ul>
         </div>
     </div>
@@ -39,7 +39,7 @@
             <div class="flex-container">
                 
                 <!-- Image One -->
-                <div class="imageContainer">
+                <div class="imageContainer" onclick="openModal();currentSlide(1)">
                     <div class="image">
                         <img src="./resources/images/barcelona.jpg" alt="The vibrant Park Guell entrance in Barcelona, Spain.">
                         <div class="imageOverlay">
@@ -51,7 +51,7 @@
                 <!-- End Image One -->
 
                 <!-- Image Two -->
-                <div class="imageContainer">
+                <div class="imageContainer" onclick="openModal();currentSlide(2)">
                     <div class="image">
                         <img src="./resources/images/prague.jpg" alt="A glorious gothic castle in Prague, Czech Republic.">
                         <div class="imageOverlay">
@@ -63,7 +63,7 @@
                 <!-- End Image Two -->
 
                 <!-- Image Three -->
-                <div class="imageContainer">
+                <div class="imageContainer" onclick="openModal();currentSlide(3)">
                     <div class="image">
                         <img src="./resources/images/berlin.jpg" alt="The city skyline of Berlin, Germany.">
                         <div class="imageOverlay">
@@ -75,7 +75,7 @@
                 <!-- End Image Three -->
 
                 <!-- Image Four -->
-                <div class="imageContainer">
+                <div class="imageContainer" onclick="openModal();currentSlide(4)">
                     <div class="image">
                         <img src="./resources/images/florence.jpg" alt="The city skyline of Florence, Italy.">
                         <div class="imageOverlay">
@@ -87,7 +87,7 @@
                 <!-- End Image Four -->
 
                 <!-- Image Five -->
-                <div class="imageContainer">
+                <div class="imageContainer" onclick="openModal();currentSlide(5)">
                     <div class="image">
                         <img src="./resources/images/brussels.jpg" alt="The Grand Palace, in Brussels, Belgium.">
                         <div class="imageOverlay">
@@ -99,7 +99,7 @@
                 <!-- End Image Five -->
 
                 <!-- Image Six -->
-                <div class="imageContainer">
+                <div class="imageContainer"  onclick="openModal();currentSlide(6)">
                     <div class="image">
                         <img src="./resources/images/santorini.jpg" alt="Twilight in Santorini, Greece.">
                         <div class="imageOverlay">
@@ -115,6 +115,76 @@
         </div>
     </section>
     <!-- END GALLERY -->
+
+    <!--MODAL SLIDESHOW-->
+    <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()" id="modalClose">&times;</span>
+        <div class="modal-content">
+
+            <div class="mySlides">
+                <div class="numberText">1 / 6</div>
+                <img class="demo cursor" src="./resources/images/barcelona.jpg" onclick="currentSlide(1)"
+                style="width: 100%;" alt="Vibrant entrance to Park Guell, in Barcelona, Spain">
+            </div>
+
+            <div class="mySlides">
+                <div class="numberText">2 / 6</div>
+                <img class="demo cursor" src="./resources/images/prague.jpg" onclick="currentSlide(2)"
+                style="width: 100%;" alt="A glorious gothic castle in Prague, Czech Republic">
+            </div>
+
+            <div class="mySlides">
+                <div class="numberText">3 / 6</div>
+                <img class="demo cursor" src="./resources/images/berlin.jpg" onclick="currentSlide(3)" 
+                style="width: 100%;" alt="The city Skyline of Berlin, Germany">
+            </div>
+
+            <div class="mySlides">
+                <div class="numberText">4 / 6</div>
+                <img class="demo cursor" src="./resources/images/florence.jpg" onclick="currentSlide(4)" 
+                style="width: 100%;" alt="The city skyline of Florence, Italy">
+            </div>
+
+            <div class="mySlides">
+                <div class="numberText">5 / 6</div>
+                <img class="demo cursor" src="./resources/images/brussels.jpg" onclick="currentSlide(5)" 
+                style="width: 100%;" alt="The Grand Palace in Brussels, Belgium">
+            </div>
+
+            <div class="mySlides">
+                <div class="numberText">6 / 6</div>
+                <img class="demo cursor" src="./resources/images/santorini.jpg" onclick="currentSlide(6)" 
+                style="width: 100%;" alt="One of the most beautiful coastal cities in Europe, Santorini, Greece">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+
+            <div class="column">
+                <img class="demo cursor" src="./resources/images/barcelona.jpg" style="width:100%" onclick="currentSlide(1)" alt="Park Guell entrance">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="./resources/images/prague.jpg" style="width:100%" onclick="currentSlide(2)" alt="Gothic castle in Prague">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="./resources/images/berlin.jpg" style="width:100%" onclick="currentSlide(3)" alt="Berlin Skyline">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="./resources/images/florence.jpg" style="width:100%" onclick="currentSlide(4)" alt="Florence Skyline">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="./resources/images/brussels.jpg" style="width:100%" onclick="currentSlide(5)" alt="Grand Palace in Brussels">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="./resources/images/santorini.jpg" style="width:100%" onclick="currentSlide(6)" alt="Coastal Santorini">
+            </div>
+        </div>
+    </div>
+    <!--END MODAL SLIDESHOW-->
 
     <!-- CONTACT -->
     <section id="contact">
@@ -163,5 +233,7 @@
     </div>
     <!-- END FOOTER -->
 
+    <!--custom javascript link-->
+    <script src="./JS/singlePage.js"></script>
 </body>
 </html>
