@@ -37,3 +37,30 @@ function displaySelectedMovieOptions() {
 function buyTickets() {
     displaySelectedMovieOptions();
 }
+
+//JQUERY
+//Shrinks header size when the document is scrolled by 80 pixels
+$(document).on("scroll", function () {
+    //When the webpage is scrolled down 50px from the top
+    if ($(document).scrollTop() > 50) {
+        //once 50px down, nav-shrink class is added
+        $("nav").addClass("nav-shrink");
+        //adjust position of mobile drop menu
+        $("div.navbar-collapse").css("margin-top", "-6px");
+    } else {
+        //if webpage is back within 50px of top of scroll
+        $("nav").removeClass("nav-shrink");
+        //margin restored to original
+        $("div.navbar-collapse").css("margin-top", "14px");
+    }
+});
+
+//close mobile menu when a navigation link is clicked
+$(document).ready(function () {
+    //On click when an element contains just thenav-link class and not the dropdown-toggle and then
+    //also close when an element with the class .dropdown-item (each movie link) has been clicked
+    $(".navbar-nav").on('click', '.nav-link:not(".dropdown-toggle"), .dropdown-item', function () {
+        //collapse navbar appropriately
+        $(".navbar-collapse").collapse('hide');
+    })
+})
