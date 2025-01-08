@@ -161,15 +161,15 @@
                         <br> Reserve you ride today!</h2>
                     <p class="rsvp-text">Please provide us with your basic contact information.</p>
                     <div class="form-rsvp">
-                        <form method="post">
-                            <input class="rsvp" type="text" value="First Name">
-                            <input class="rsvp" type="text" value="Last Name">
-                            <input class="rsvp" type="text" value="Email Address">
-                            <input class="rsvp" type="text" value="Phone Number">
+                        <form method="post" onsubmit="return false">
+                            <input id="firstName" class="rsvp" type="text" value="First Name">
+                            <input id="lastName" class="rsvp" type="text" value="Last Name">
+                            <input id="email" class="rsvp" type="text" value="Email Address">
+                            <input id="phone" class="rsvp" type="text" value="Phone Number (digits only)">
                             <div class="form-spacer">
                                 <label class="terms">Terms and Conditions</label>
                             </div>
-                            <div class="submit">
+                            <div class="submit" onclick="validateForm()">
                                 <input type="submit" value="Submit">
                             </div>
                         </form>
@@ -186,5 +186,60 @@
     </div>
     <!-- END FOOTER -->
 
+    <script>
+        document.body.classList.add('fade-in');
+
+        function validateForm() {
+            var enteredFirstName = document.getElementById('firstName');
+            var enteredLastName = document.getElementById('lastName');
+            var enteredEmail = document.getElementById('email');
+            var enteredPhoneNumber = document.getElementById('phone');
+            var validationMessage = "";
+            //if any of the fields are the same as original value
+            if (enteredFirstName.value === "First Name" || enteredLastName.value === "Last Name" || enteredEmail.value === "Email Address" || enteredPhoneNumber.value === "Phone Number") {
+                validationMessage = "Please fill out all of the fields.";
+            } else {
+                var validEmail, validPhone;
+                //all names are valid??
+                //check if email is valid
+                var hasAt, hasDot;
+                if (enteredEmail.value.indexOf("@") > -1) {
+                    hasAt = true;
+                    if (enteredEmail.value.indexOf('.') > -1) {
+                        hasDot = true;
+                    }
+                } 
+                if (hasAt && hasDot) {
+                    validEmail = true;
+                } else {
+                    validEmail = false;
+                }
+
+                //check phone number
+                var thisEntry = enteredPhoneNumber.value;
+                var numberTruth = [];
+                for (let i = 0; i < thisEntry.length; i++) {
+                    const character = thisEntry[i];
+                    if (character >= '0' && character <= '9') {
+                        numberTruth.push(true);
+                    }
+                }
+                if (numberTruth.length === thisEntry.length) {
+                    validPhone = true;
+                }
+            }
+            //edit validation message appropriately, and dispaly to the console
+            if (validEmail && validPhone) {
+                validationMessage = 'Thank you, all forms are valid.';
+            } 
+            if (!validEmail) {
+                validationMessage = "The email address you entered is invalid";
+            }
+            if (!validPhone) {
+                validationMessage = "The phone number you entered is invalid";
+            }
+            console.log(validationMessage);
+        }
+    </script>
 </body>
 </html>

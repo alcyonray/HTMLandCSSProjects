@@ -70,7 +70,7 @@ h4 {
 
 p {
     font-weight: 300;
-    line-height: 30px;
+    line-height: 2vw; /*slide 247 challenge, using viewport width unit*/
     padding-bottom: 15px;
 }
 

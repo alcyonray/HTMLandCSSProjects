@@ -18,6 +18,17 @@ body {
     background-color: #fff;
 }
 
+/*body fade-out, for slide 428 challenge*/
+body {
+    opacity: 0;
+    transition: 5s opacity;
+}
+
+body.fade-in {
+    opacity: 1;
+    transition: 5s ease;
+}
+
 footer, nav {
     display: block;
 }
