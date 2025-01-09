@@ -315,3 +315,21 @@ footer{
     right: 10px;
     bottom: 10px;
 }
+
+/*sticky contact button*/
+#contactButton {
+    right: 50px;
+    bottom: 50px;
+    position: fixed;
+    z-index: 9;
+}
+
+#contactButton a {
+    font-family: var(--main-font-family);
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+#contactButton a:hover {
+    color: var(--accent-text-color);
+}

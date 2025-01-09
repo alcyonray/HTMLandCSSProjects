@@ -53,6 +53,7 @@ $(document).on("scroll", function () {
         //margin restored to original
         $("div.navbar-collapse").css("margin-top", "14px");
     }
+
 });
 
 //close mobile menu when a navigation link is clicked
